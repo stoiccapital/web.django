@@ -1,0 +1,29 @@
+.cta-section {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.cta-section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.cta-section .cta-button.primary {
+    background-color: #000;
+    color: #fff;
+}
+
+.cta-section .cta-button.primary:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+} 

@@ -1,0 +1,33 @@
+.cta-button {
+    display: inline-block;
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.cta-button.primary {
+    background-color: #000;
+    color: #fff;
+}
+
+.cta-button.primary:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: #000;
+    border-color: #000;
+}
+
+.cta-button.secondary:hover {
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-2px);
+} 
