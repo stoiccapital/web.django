@@ -199,6 +199,84 @@
             </div>
         </section>
 
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Häufig gestellte Fragen</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Wie kann ich die angebotenen Services testen?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Gerne können Sie mit uns einen Termin für eine ausführliche Online-Demo vereinbaren. Wir nehmen uns gerne die Zeit und gehen mit Ihnen alle Fragen und gewünschten Funktionen im Detail und in praktischer Anwendung durch.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Welche Voraussetzungen benötige ich zur Nutzung von Services?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Für die Nutzung unserer Services benötigen Sie lediglich eine Internetverbindung und einen aktuellen Web-Browser (Google Chrome bzw. Microsoft Edge).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Gibt es einmalige Einrichtungsgebühren?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nein. Für unsere Services bezahlen Sie lediglich die jeweiligen monatlichen Lizenzgebühren für die Anzahl der lizenzierten Benutzer:innen (Named-User Licenses).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Gibt es eine Online-Hilfe bzw. ein Online-Benutzerhandbuch?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ja, wir stellen unseren Kund:innen eine kostenloses Service Center mit Online-Hilfe und Acadamy-Kursen zu unseren Services zur Verfügung.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Wie läuft der Umstieg von einem bestehenden System ab?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sobald Sie sich für unsere Systeme entscheiden, koordinieren wir die Datenübernahme und vereinbaren gemeinsam mit Ihnen Termine für ein ausführliches persönliches Onboarding und die tatsächliche Inbetriebnahme unserer Services.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Wie lange ist die Vertragslaufzeit bei VetNative Services?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Die Mindestvertragslaufzeit bei VetNative Services beträgt 12 Monate.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Gibt es eine kostenlose Smartphone-App für meine Kund:innen?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ja, die eltiga Smartphone-App beinhaltet unsere Elektronische Tiergesundheitsakte und verbindet Ihre Kund:innen mit Ihrer Tierarztpraxis. Die Smartphone-App ist kostenlos in den App-Stores von Apple und Google verfügbar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
@@ -267,6 +345,24 @@
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
         }));
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html> 

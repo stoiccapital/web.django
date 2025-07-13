@@ -584,6 +584,95 @@ body {
     font-size: 14px;
 }
 
+/* FAQ Section */
+.faq-section {
+    padding: 100px 20px;
+    background-color: #f8f9fa;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #000;
+    letter-spacing: -0.5px;
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.faq-question {
+    padding: 25px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f8f9fa;
+}
+
+.faq-question h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.faq-toggle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    transition: all 0.3s ease;
+    min-width: 24px;
+    text-align: center;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+    color: #000;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #fff;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    padding: 0 30px 25px;
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
 /* CTA Section */
 .cta-section {
     padding: 100px 20px;
@@ -801,6 +890,7 @@ body {
     .solutions-section h2,
     .features-section h2,
     .pricing-section h2,
+    .faq-section h2,
     .cta-section h2 {
         font-size: 36px;
     }
