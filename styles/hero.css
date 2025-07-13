@@ -82,4 +82,8 @@
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.hero-subtitle {
+    color: #666;
 } 
