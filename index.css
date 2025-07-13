@@ -468,6 +468,21 @@ body {
     font-weight: 600;
 }
 
+.trial-badge {
+    margin-top: 15px;
+}
+
+.trial-text {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
 .pricing-features {
     margin: 30px 0;
 }
