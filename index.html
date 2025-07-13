@@ -14,11 +14,16 @@
             <div class="nav-brand">
                 <a href="#home">Vetmates</a>
             </div>
-            <div class="nav-menu">
+            <div class="nav-menu" id="nav-menu">
                 <a href="#solutions" class="nav-link">Lösungen</a>
                 <a href="#pricing" class="nav-link">Preise</a>
                 <a href="#contact" class="nav-link">Sales Team kontaktieren</a>
                 <a href="#login" class="nav-link nav-button">Anmelden</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
@@ -98,14 +103,10 @@
                             <h3>Jährlich</h3>
                             <div class="price">
                                 <span class="currency">€</span>
-                                <span class="amount">16</span>
-                                <span class="period">/Monat</span>
+                                <span class="amount">240</span>
+                                <span class="period">/Jahr</span>
                             </div>
                             <p class="price-per-user">pro Benutzer</p>
-                            <div class="discount">
-                                <span class="original-price">€20</span>
-                                <span class="discount-text">20% Rabatt</span>
-                            </div>
                             <div class="trial-badge">
                                 <span class="trial-text">30 Tage kostenlos testen</span>
                             </div>
@@ -126,7 +127,7 @@
                     </div>
                 </div>
                 <div class="pricing-note">
-                    <p>Alle Preise verstehen sich zzgl. MwSt. 30 Tage kostenlos testen, danach €16/Monat pro Benutzer. Kündigung jederzeit möglich.</p>
+                    <p>Alle Preise verstehen sich zzgl. MwSt. 30 Tage kostenlos testen, danach €240/Jahr pro Benutzer. Kündigung jederzeit möglich.</p>
                 </div>
             </div>
         </section>
@@ -183,5 +184,22 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
 </body>
 </html> 
