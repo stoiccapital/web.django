@@ -23,17 +23,17 @@
 }
 
 .pricing-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
+    display: flex;
+    gap: 32px;
     justify-content: center;
-    margin-top: 40px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    flex-wrap: wrap;
 }
 
 .pricing-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    min-width: 260px;
+    margin: 0;
     background: #fff;
     border-radius: 18px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.10);
@@ -172,4 +172,15 @@
 .pricing-note p {
     font-size: 14px;
     color: #666;
+} 
+
+@media (max-width: 900px) {
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pricing-card {
+        max-width: 100%;
+        min-width: 0;
+    }
 } 
